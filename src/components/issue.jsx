@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./issue.scss";
 
 const decorationIcon = (
   <svg
@@ -51,9 +52,7 @@ export class Issue extends Component {
                 </p>
               ))}
             </div>
-            <div className="issue-content-title-info">
-
-            </div>
+            <div className="issue-content-title-info"></div>
           </div>
         </div>
         <div className="issue-comment">
