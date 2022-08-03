@@ -2,19 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #d8dee4;
+  border: 0.1px solid #30363d;
+  border-collapse: collapse;
+  padding: 1rem;
   &-content {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    // padding: 1rem;
     * {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
     }
     &-icon {
-      fill: #3fba50;
       padding: 0.4rem 1rem;
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: #3fba50;
+      }
     }
     &-title {
       &-text {
@@ -22,39 +29,52 @@
         flex-wrap: wrap;
         gap: 0.4rem;
         h3 {
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           display: flex;
           justify-content: center;
           align-items: center;
+          color: #c9d1d9;
         }
         p {
-          font-size: 0.7rem;
-          font-weight: 900;
+          font-size: rem;
+          font-weight: 500;
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 0.3rem 0.5rem;
+          padding: 0.1rem 0.4rem;
           border-radius: 223px;
         }
         .component {
-          background-color: #fbca01;
-          border: 1px solid #fbca01;
-          color: #000;
+          background-color: #3f3a1d;
+          border: 2px solid #776516;
+          color: #fac70d;
         }
         .status {
-          background-color: #d3c6f9;
-          border: 1px solid #d3c6f9;
-          color: #000;
+          background-color: #383a49;
+          border: 2px solid #615e77;
+          color: #d2c3f9;
         }
         .resolution {
-          background-color: #fff2664b;
-          border: 1px solid #fff266;
-          color: #000;
+          background-color: #404446;
+          border: 2px solid #7a7b75;
+          color: #fff1ba;
         }
         .bug {
-          background-color: #b60104;
-          border: 1px solid #b60104;
-          color: #fff;
+          background-color: #33161d;
+          border: 2px solid #703e43;
+          color: #fd9b9d;
+        }
+      }
+      &-info {
+        color: #8b948e;
+
+        a {
+          text-decoration: none;
+          color: #8b948e;
+
+          &:hover {
+            color: #0c58ca;
+          }
         }
       }
     }
@@ -63,14 +83,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    svg {
-      fill: #59606a;
-    }
-
-    color: #59606a;
+    gap: 0.3rem;
+    color: #8b949e;
     font-family: sans-serif;
-    p {
-      transform: translate(0, -2px);
+    margin-top: 1rem;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #8b949e;
     }
   }
 }
