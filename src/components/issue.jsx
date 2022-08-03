@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
 import "./issue.scss";
-=======
->>>>>>> origin
 
 const decorationIcon = (
   <svg
@@ -20,16 +17,13 @@ const decorationIcon = (
     ></path>
   </svg>
 );
-<<<<<<< HEAD
-=======
-
->>>>>>> origin
 const commentIcon = (
   <svg
     aria-hidden="true"
     height="16"
     viewBox="0 0 16 16"
     version="1.1"
+    z
     width="16"
     data-view-component="true"
     className="octicon octicon-comment v-align-middle"
@@ -40,18 +34,13 @@ const commentIcon = (
     ></path>
   </svg>
 );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin
 export class Issue extends Component {
   render() {
     const { issues } = this.props;
-
+    console.log(issues);
     return (
       <div className="issue">
         <div className="issue-content">
-<<<<<<< HEAD
           <div className="issue-content-icon">{decorationIcon}</div>
           <div className="issue-content-title">
             <div className="issue-content-title-text">
@@ -63,26 +52,13 @@ export class Issue extends Component {
                 </p>
               ))}
             </div>
-            <div className="issue-content-title-info"></div>
+            <div className="issue-content-title-info">
+              <p></p>
+            </div>
           </div>
         </div>
         <div className="issue-comment">
           {commentIcon} <p>100</p>
-=======
-          <div className="issue-icon">{decorationIcon}</div>
-
-          <div className="issue-title">
-            <h3> {issues.title} </h3>
-            {issues.tags.map((tag) => (
-              <p className={tag.type} key={tag.type}>
-                {tag.type[0].toUpperCase() + tag.type.substring(1)} :{tag.label}
-              </p>
-            ))}
-          </div>
-        </div>
-        <div className="issue-comment">
-          {commentIcon} <p>1</p>
->>>>>>> origin
         </div>
       </div>
     );
