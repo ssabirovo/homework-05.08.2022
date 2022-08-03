@@ -52,10 +52,20 @@ export class Issue extends Component {
               ))}
             </div>
             <div className="issue-content-title-info">
-              <p>
-                #{issue.id} opened 4 hours ago by{" "}
-                <a href={issue.user.avatarURL}>{issue.user.username}</a>
-              </p>
+              #{issue.id} opened 4 hours ago by {" "}
+              <a href={issue.user.avatarURL} data-bs-toggle="tooltip">
+                {issue.user.username}
+              </a>
+              <div className="tultip">
+                <div className="user">
+                  <img src={issue.user.avatarURL} className="user-img"></img>
+                  <div>
+                    <h5>{issue.user.username}</h5>
+                    <p>ID : {issue.user.id.slice(8)}</p>
+                  </div>
+                </div>
+                <p>{issue.title}</p>
+              </div>
             </div>
           </div>
         </div>
