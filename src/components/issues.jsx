@@ -6,7 +6,7 @@ export class Issues extends Component {
   render() {
     return (
       <div className="issues">
-        {getIssues(1).map((issue, idx) => (
+        {getIssues(50).map((issue, idx) => (
           <Issue issues={issue} key={issue.id} />
         ))}
       </div>
