@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
 import "./issue.scss";
-=======
->>>>>>> origin
 
 const decorationIcon = (
   <svg
@@ -20,10 +17,6 @@ const decorationIcon = (
     ></path>
   </svg>
 );
-<<<<<<< HEAD
-=======
-
->>>>>>> origin
 const commentIcon = (
   <svg
     aria-hidden="true"
@@ -40,49 +33,34 @@ const commentIcon = (
     ></path>
   </svg>
 );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin
 export class Issue extends Component {
   render() {
     const { issues } = this.props;
-
+    console.log(issues);
     return (
       <div className="issue">
         <div className="issue-content">
-<<<<<<< HEAD
           <div className="issue-content-icon">{decorationIcon}</div>
           <div className="issue-content-title">
             <div className="issue-content-title-text">
               <h3> {issues.title} </h3>
               {issues.tags.map((tag) => (
                 <p className={tag.type} key={tag.type}>
-                  {tag.type[0].toUpperCase() + tag.type.substring(1)} :{" "}
+                  {tag.type[0].toUpperCase() + tag.type.substring(1)} :
                   {tag.label}
                 </p>
               ))}
             </div>
-            <div className="issue-content-title-info"></div>
-          </div>
-        </div>
-        <div className="issue-comment">
-          {commentIcon} <p>100</p>
-=======
-          <div className="issue-icon">{decorationIcon}</div>
-
-          <div className="issue-title">
-            <h3> {issues.title} </h3>
-            {issues.tags.map((tag) => (
-              <p className={tag.type} key={tag.type}>
-                {tag.type[0].toUpperCase() + tag.type.substring(1)} :{tag.label}
+            <div className="issue-content-title-info">
+              <p>
+                #{issues.id} opened 2 days ago by{" "}
+                <a href={issues.user.avatarURL}>{issues.user.username}</a>
               </p>
-            ))}
+            </div>
           </div>
         </div>
         <div className="issue-comment">
-          {commentIcon} <p>1</p>
->>>>>>> origin
+          {commentIcon} <p>{issues.comments}</p>
         </div>
       </div>
     );
