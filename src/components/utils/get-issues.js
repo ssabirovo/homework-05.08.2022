@@ -1,7 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-
-export const getIssues = (amount = 10) => {
+export const getIssues = (amount = 50) => {
   const issues = [];
   for (let idx = 0; idx < amount; idx++) {
     const newIssue = {

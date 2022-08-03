@@ -37,7 +37,7 @@ const commentIcon = (
 export class Issue extends Component {
   render() {
     const { issues } = this.props;
-    console.log(issues);
+
     return (
       <div className="issue">
         <div className="issue-content">
@@ -51,10 +51,9 @@ export class Issue extends Component {
                   {tag.label}
                 </p>
               ))}
+              <div>aefwegewg</div>
             </div>
-            <div className="issue-content-title-info">
-              <p></p>
-            </div>
+            <div className="issue-content-title-info"></div>
           </div>
         </div>
         <div className="issue-comment">
