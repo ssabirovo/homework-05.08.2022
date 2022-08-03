@@ -23,7 +23,6 @@ const commentIcon = (
     height="16"
     viewBox="0 0 16 16"
     version="1.1"
-    z
     width="16"
     data-view-component="true"
     className="octicon octicon-comment v-align-middle"
@@ -36,7 +35,7 @@ const commentIcon = (
 );
 export class Issue extends Component {
   render() {
-    const { issues } = this.props;
+    const { issue } = this.props;
 
     return (
       <div className="issue">
@@ -44,20 +43,25 @@ export class Issue extends Component {
           <div className="issue-content-icon">{decorationIcon}</div>
           <div className="issue-content-title">
             <div className="issue-content-title-text">
-              <h3> {issues.title} </h3>
-              {issues.tags.map((tag) => (
+              <h3> {issue.title} </h3>
+              {issue.tags.map((tag) => (
                 <p className={tag.type} key={tag.type}>
                   {tag.type[0].toUpperCase() + tag.type.substring(1)} :{" "}
                   {tag.label}
                 </p>
               ))}
-              <div>aefwegewg</div>
             </div>
-            <div className="issue-content-title-info"></div>
+            <div className="issue-content-title-info">
+              <p>
+                #{issue.id} opened 4 hours ago by{" "}
+                <a href={issue.user.avatarURL}>{issue.user.username}</a>
+              </p>
+            </div>
           </div>
         </div>
         <div className="issue-comment">
-          {commentIcon} <p>100</p>
+          <p>{commentIcon}</p>
+          <p>{issue.comments}</p>
         </div>
       </div>
     );

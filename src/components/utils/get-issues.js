@@ -28,7 +28,6 @@ export const getIssues = (amount = 50) => {
     issues.push(newIssue);
   }
 
-  console.log("issues = ", issues);
   return issues;
 };
 
