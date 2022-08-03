@@ -1,8 +1,9 @@
 import { faker } from "@faker-js/faker";
 
+
 export const getIssues = (amount = 10) => {
   const issues = [];
-  for (let idx = 0; idx < 50; idx++) {
+  for (let idx = 0; idx < amount; idx++) {
     const newIssue = {
       id: faker.random.numeric(5),
       title: faker.random.words(6),
@@ -20,7 +21,7 @@ export const getIssues = (amount = 10) => {
           label: faker.random.words(2),
         },
         {
-          type: "status",
+          type: "bug",
           label: faker.random.words(2),
         },
       ],
@@ -29,6 +30,7 @@ export const getIssues = (amount = 10) => {
   }
 
   console.log("issues = ", issues);
+  return issues;
 };
 
 const getUser = () => {
