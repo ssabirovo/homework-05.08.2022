@@ -1,10 +1,9 @@
 import React from "react";
-
 import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./base.scss";
-import App from "./App";
+import "./assets/base.scss";
+import Dashboard from "./pages/dashboard";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<App />);
+root.render(<Dashboard />);
