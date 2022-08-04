@@ -1,0 +1,21 @@
+@import "../../assets/base.scss";
+.search {
+  display: flex;
+  align-items: center;
+  padding: .2rem 1rem;
+  background-color: $input-background;
+  width: max-content;
+  border-radius: 8px;
+  svg {
+    fill: $text;
+  }
+
+  input {
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    color: $text;
+    background-color: transparent;
+    outline: none;
+  }
+}

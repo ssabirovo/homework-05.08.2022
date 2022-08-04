@@ -1,10 +1,15 @@
+import React, { Component } from "react";
+import { searchIcon } from "../icons/index";
 import "./search.scss";
 
-import React, { Component } from "react";
-
-export class Search extends Component {
+class Search extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div className="search">
+            {searchIcon}
+            <input type="text" value="Search"/>
+      </div>
+    );
   }
 }
 
