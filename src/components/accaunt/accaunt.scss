@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  width: max-content;
+  width: 100%;
   background-color: $input-background;
   padding: 20px;
   * {
@@ -35,8 +35,7 @@
   .logout {
     svg {
       &:hover {
-        background-color: $main-color;
-        fill: $bule;
+        fill: $black;
       }
     }
   }

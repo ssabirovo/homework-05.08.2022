@@ -1,4 +1,7 @@
 @import "../../assets/base.scss";
+.toggleZone {
+  padding: 1.3rem 1rem;
+}
 .btns {
   padding: 0.2rem 1rem;
   width: max-content;
@@ -20,5 +23,6 @@
 }
 
 .btns-title {
+  color: $text;
   font-size: 3rem;
 }

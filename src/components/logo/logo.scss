@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: row;
   gap: 12px;
-  padding: 5px 15px;
+  padding: 5px 16px;
   width: max-content;
-
+  
   h1 {
     font-size: 18px;
     line-height: 24px;
     color: $text;
+    margin: 0;
   }
 }

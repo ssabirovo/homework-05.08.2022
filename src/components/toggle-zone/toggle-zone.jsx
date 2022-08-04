@@ -3,10 +3,15 @@ import "./toggle-zone.scss";
 
 export class ToggleZone extends Component {
   render() {
+    const { onToggle, title, isOpened } = this.props;
     return (
-      <div>
-        <button className="btns">sigir</button>
-        <h1 className="btns-title">Katta sigir</h1>
+      <div className="toggleZone">
+        <button onClick={() => onToggle()} className="btns">
+          <i
+            className={`fa-solid fa-chevron-${isOpened ? "left" : "right"}`}
+          ></i>
+        </button>
+        <h1 className="btns-title">{title}</h1>
       </div>
     );
   }

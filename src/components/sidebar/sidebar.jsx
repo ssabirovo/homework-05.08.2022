@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Accaunt from "../accaunt/accaunt";
 import Link from "../links/link";
 import Logo from "../logo/logo";
 import Search from "../search/search";
@@ -6,17 +7,25 @@ import "./sidebar.scss";
 
 export class Sidebar extends Component {
   render() {
-    console.log(this.props.icons);
+    const { icons, onActive, isOpened } = this.props;
     return (
-      <div className="sidebar">
-        <div className="sidebar_assets">
-          <Logo />
-          <Search />
-          {this.props.icons.map((icon) => (
-            <Link icon={icon.iconURL} title={icon.title} />
+      <div className="sidebar ">
+        <div className="sidebar_assets ">
+          <Logo isOpened={isOpened} />
+          <Search isOpened={isOpened} />
+          {icons.map((icon, idx) => (
+            <Link
+              isOpened={isOpened}
+              onActive={onActive}
+              isActive={icon.isActive}
+              key={idx}
+              linkIdx={idx}
+              icon={icon.iconURL}
+              title={icon.title}
+            />
           ))}
         </div>
-        <div></div>
+        <Accaunt isOpened={isOpened} />
       </div>
     );
   }

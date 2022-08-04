@@ -7,6 +7,7 @@ $text: #526581;
 $white: #fff;
 $bule: #007aff;
 $input-background: #f2f4f6;
+
 * {
   @font-face {
     font-family: "PingFang SC";
@@ -22,4 +23,12 @@ $input-background: #f2f4f6;
       url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.svg#PingFang SC")
         format("svg");
   }
+  transition: 0.1s linear;
+}
+.hidden {
+  display: none !important;
+}
+.linkClosed {
+  width: max-content !important;
+  justify-content: center !important;
 }

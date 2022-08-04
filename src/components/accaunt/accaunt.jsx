@@ -7,14 +7,18 @@ class Accaunt extends Component {
   render() {
     return (
       <div className="accaunt">
-        <div className="accauntImg">
+        <div className="accauntImg ">
           <img src={avatarImg} alt="not-found" />
         </div>
-        <div className="accauntInfo">
+        <div
+          className={`accauntInfo ${!this.props.isOpened ? "hidden" : null} `}
+        >
           <h2>Richard</h2>
           <p>9394lay@gmail.com</p>
         </div>
-        <div className="loguot">{logout}</div>
+        <div className={`logout ${!this.props.isOpened ? "hidden" : null}`}>
+          {logout}
+        </div>
       </div>
     );
   }

@@ -2,18 +2,21 @@
 .search {
   display: flex;
   align-items: center;
-  padding: .2rem 1rem;
+  padding: 0 1rem;
   background-color: $input-background;
   width: max-content;
   border-radius: 8px;
+  width: max-content;
   svg {
     fill: $text;
+    margin: 16px 0;
   }
 
   input {
+    width: 30%;
     border: none;
     border-radius: 15px;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     color: $text;
     background-color: transparent;
     outline: none;

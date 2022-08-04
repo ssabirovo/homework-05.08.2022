@@ -6,8 +6,8 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-            {searchIcon}
-            <input type="text" value="Search"/>
+        {searchIcon}
+        {this.props.isOpened ? <input type="text" value="Search" /> : null}
       </div>
     );
   }

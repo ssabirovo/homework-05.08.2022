@@ -12,29 +12,41 @@ import {
   schedules,
   settings,
 } from "../components/icons/index";
-import Accaunt from "../components/accaunt/accaunt";
-import Link from "../components/links/link";
-// import Search from "../components/search/search";
-import Button from "../components/toggle-zone/button";
 
 export class Dashboard extends Component {
   state = {
     icons: [
-      { title: "dashboardIcon", iconURL: dashboardIcon },
-      { title: "ordersIcons", iconURL: ordersIcons },
-      { title: "schedules", iconURL: schedules },
-      { title: "messages", iconURL: messages },
-      { title: "inbox", iconURL: inbox },
-      { title: "analytics", iconURL: analytics },
-      { title: "news", iconURL: news },
-      { title: "settings", iconURL: settings },
+      { isActive: true, title: "Dashboard", iconURL: dashboardIcon },
+      { isActive: false, title: "Orders", iconURL: ordersIcons },
+      { isActive: false, title: "Schedules", iconURL: schedules },
+      { isActive: false, title: "Messages", iconURL: messages },
+      { isActive: false, title: "Inbox", iconURL: inbox },
+      { isActive: false, title: "Analytics", iconURL: analytics },
+      { isActive: false, title: "News", iconURL: news },
+      { isActive: false, title: "Settings", iconURL: settings },
     ],
+    toggleZoneTitle: "Dashboard",
+    sidebarOpened: true,
+  };
+  handleActive = (iconIdx) => {
+    let temp = this.state.icons;
+    temp.map((item) => (item.isActive = false));
+    temp[iconIdx].isActive = true;
+    this.setState({ icons: temp, toggleZoneTitle: temp[iconIdx].title });
+  };
+  handleToggle = () => {
+    this.setState({ sidebarOpened: !this.state.sidebarOpened });
   };
   render() {
+    const { sidebarOpened, icons, toggleZoneTitle } = this.state;
     return (
       <div className="dashboard">
-        <Sidebar icons={this.state.icons} />
-        <ToggleZone />
+        <Sidebar
+          isOpened={sidebarOpened}
+          icons={icons}
+          onActive={this.handleActive}
+        />
+        <ToggleZone isOpened={sidebarOpened} onToggle={this.handleToggle} title={toggleZoneTitle} />
       </div>
     );
   }
