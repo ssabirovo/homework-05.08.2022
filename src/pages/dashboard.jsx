@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Search from "../components/search/search";
+import Sidebar from "../components/sidebar/sidebar";
 
 export class Dashboard extends Component {
   render() {
     return (
-      <div>
-
+      <div className="dashboard">
+        <Sidebar />
       </div>
     );
   }
