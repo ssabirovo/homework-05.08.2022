@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/base.scss";
 import Dashboard from "./pages/dashboard";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
