@@ -1,18 +1,32 @@
 @import "../../assets/base.scss";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/raxmonbek
 .link {
   display: flex;
   flex-direction: row;
   align-items: center;
+<<<<<<< HEAD
   justify-content: flex-start;
   gap: 12px;
   width: 100%;
   padding: 10px 16px;
+=======
+  justify-content: centerw;
+  gap: 12px;
+  width: max-content;
+  padding: 10px 50px;
+>>>>>>> origin/raxmonbek
   background: $white;
   color: $text;
   border-radius: 8px;
   user-select: none;
   cursor: pointer;
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/raxmonbek
 
   &:hover {
     background-color: $input-background;
