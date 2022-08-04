@@ -1,0 +1,43 @@
+@import "../../assets/base.scss";
+.accaunt {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: max-content;
+  background-color: $input-background;
+  padding: 20px;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .accauntImg {
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .accauntInfo {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 14px;
+      line-height: 12px;
+      color: $main-color;
+    }
+    p {
+      font-size: 12px;
+      //   line-height: 5px;
+      color: $text;
+    }
+  }
+  .logout {
+    svg {
+      &:hover {
+        background-color: $main-color;
+        fill: $bule;
+      }
+    }
+  }
+}
