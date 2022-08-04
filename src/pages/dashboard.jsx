@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Search from "../components/search/search";
 
 export class Dashboard extends Component {
   render() {
     return (
-      <div>Dashboard</div>
-    )
+      <div>
+        <Search />
+      </div>
+    );
   }
 }
 
-export default Dashboard
+export default Dashboard;
