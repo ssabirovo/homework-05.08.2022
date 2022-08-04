@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./button.scss";
+import "./toggle-zone.scss";
 
-export class Button extends Component {
+export class ToggleZone extends Component {
   render() {
     return (
       <div>
@@ -12,4 +12,4 @@ export class Button extends Component {
   }
 }
 
-export default Button;
+export default ToggleZone;
