@@ -21,6 +21,7 @@ export class Dashboard extends Component {
   };
   render() {
     const { sidebarOpened, icons, toggleZoneTitle } = this.state;
+    console.log(icons)
     return (
       <div className="dashboard">
         <Sidebar

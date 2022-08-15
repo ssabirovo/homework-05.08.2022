@@ -34,13 +34,141 @@ const data = [
       },
     ],
   },
-  { isActive: false, title: "Orders", iconURL: ordersIcons },
-  { isActive: false, title: "Schedules", iconURL: schedules },
-  { isActive: false, title: "Messages", iconURL: messages },
-  { isActive: false, title: "Inbox", iconURL: inbox },
-  { isActive: false, title: "Analytics", iconURL: analytics },
-  { isActive: false, title: "News", iconURL: news },
-  { isActive: false, title: "Settings", iconURL: settings },
+  {
+    isActive: false,
+    title: "Orders",
+    iconURL: ordersIcons,
+    path: "/orders",
+    children: [
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+    ],
+  },
+  {
+    isActive: false,
+    title: "Schedules",
+    iconURL: schedules,
+    path: "/schedules",
+    children: [
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+    ],
+  },
+  {
+    isActive: false,
+    title: "Messages",
+    iconURL: messages,
+    path: "/message",
+    children: [
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+    ],
+  },
+  {
+    isActive: false,
+    title: "Inbox",
+    iconURL: inbox,
+    path: "/inbox",
+    children: [
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+    ],
+  },
+  {
+    isActive: false,
+    title: "Analytics",
+    iconURL: analytics,
+    path: "/analytics",
+    children: [
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+    ],
+  },
+  {
+    isActive: false,
+    title: "News",
+    iconURL: news,
+    path: "/news",
+    children: [],
+  },
+  {
+    isActive: false,
+    title: "Settings",
+    iconURL: settings,
+    path: "/settings",
+    children: [
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+      {
+        isActive: false,
+        title: faker.word.noun(),
+        path: faker.random.numeric(5),
+      },
+    ],
+  },
 ];
 
 
