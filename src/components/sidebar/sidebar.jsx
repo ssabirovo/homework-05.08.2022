@@ -5,6 +5,7 @@ import Logo from "../logo/logo";
 import Search from "../search/search";
 import "./sidebar.scss";
 
+// 
 export class Sidebar extends Component {
   render() {
     const { icons, onActive, isOpened } = this.props;
