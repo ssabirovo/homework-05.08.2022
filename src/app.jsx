@@ -11,8 +11,9 @@ export class App extends Component {
           <Route
             path={item.path}
             render={(props) => (
-              <Dashboard defaultProps={props} activeComponent={item.title} /> 
-              
+              <Dashboard defaultProps={props} activeComponent={item.title} />
+
+              //adaf
             )}
           />
         ))}
