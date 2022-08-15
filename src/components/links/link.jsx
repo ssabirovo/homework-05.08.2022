@@ -2,15 +2,24 @@ import React, { Component } from "react";
 
 import "./link.scss";
 
-class Link extends Component {
+class Linkcha extends Component {
   render() {
-    const { onActive, isActive, linkIdx, title, icon, isOpened, children } =
-      this.props;
-
+    const {
+      onActive,
+      isActive,
+      linkIdx,
+      title,
+      icon,
+      isOpened,
+      children,
+      defaultProps,
+      path,
+    } = this.props;
+    console.log("defaultProps ", defaultProps);
     return (
       <>
         <div
-          onClick={() => onActive(linkIdx)}
+          onClick={() => defaultProps.history.push(path)}
           className={`link ${isActive ? "linkActive" : ""} ${
             !isOpened ? "linkClosed " : ""
           }`}
@@ -28,4 +37,4 @@ class Link extends Component {
   }
 }
 
-export default Link;
+export default Linkcha;

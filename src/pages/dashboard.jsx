@@ -10,6 +10,17 @@ export class Dashboard extends Component {
     toggleZoneTitle: "Dashboard",
     sidebarOpened: true,
   };
+
+  componentDidMount = () => {
+    let temp = this.state.icons;
+    temp.map((item) =>
+      item.title === this.props.activeComponent
+        ? (item.isActive = true)
+        : (item.isActive = false)
+    );
+    this.setState({ icons: temp });
+  };
+
   handleActive = (iconIdx) => {
     let temp = this.state.icons;
     temp.map((item) => (item.isActive = false));
@@ -21,13 +32,14 @@ export class Dashboard extends Component {
   };
   render() {
     const { sidebarOpened, icons, toggleZoneTitle } = this.state;
-    console.log(icons)
+    
     return (
       <div className="dashboard">
         <Sidebar
           isOpened={sidebarOpened}
           icons={icons}
           onActive={this.handleActive}
+          defaultProps={this.props.defaultProps}
         />
         <ToggleZone
           isOpened={sidebarOpened}

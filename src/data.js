@@ -12,7 +12,7 @@ import {
 } from "./components/icons/index";
 const data = [
   {
-    isActive: true,
+    isActive: false,
     title: "Dashboard",
     iconURL: dashboardIcon,
     path: "/dashboard",
@@ -35,7 +35,7 @@ const data = [
     ],
   },
   {
-    isActive: false,
+    isActive: true,
     title: "Orders",
     iconURL: ordersIcons,
     path: "/orders",
@@ -79,7 +79,7 @@ const data = [
     isActive: false,
     title: "Messages",
     iconURL: messages,
-    path: "/message",
+    path: "/messages",
     children: [
       {
         isActive: false,
