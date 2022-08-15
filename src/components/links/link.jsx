@@ -15,7 +15,7 @@ class Linkcha extends Component {
       defaultProps,
       path,
     } = this.props;
-    console.log("defaultProps ", defaultProps);
+    // console.log("defaultProps ", defaultProps);
     return (
       <>
         <div
@@ -29,7 +29,9 @@ class Linkcha extends Component {
         </div>
         {isActive && children
           ? children.map((child) => (
-              <div style={{ color: "#fff" }}>{child.title}</div>
+              <div className="link" >
+                {child.title}
+              </div>
             ))
           : null}
       </>
