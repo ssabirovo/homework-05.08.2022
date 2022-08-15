@@ -18,17 +18,17 @@ const data = [
     path: "/dashboard",
     children: [
       {
-        isActive: true,
+        isActive: false,
         title: faker.vehicle.manufacturer(),
         path: faker.random.numeric(5),
       },
       {
-        isActive: true,
+        isActive: false,
         title: faker.vehicle.manufacturer(),
         path: faker.random.numeric(5),
       },
       {
-        isActive: true,
+        isActive: false,
         title: faker.vehicle.manufacturer(),
         path: faker.random.numeric(5),
       },

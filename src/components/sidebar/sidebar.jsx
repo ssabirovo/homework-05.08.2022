@@ -7,7 +7,8 @@ import "./sidebar.scss";
 
 export class Sidebar extends Component {
   render() {
-    const { icons, onActive, isOpened } = this.props;
+    const { icons, onActive, isOpened, children } = this.props;
+
     return (
       <div className="sidebar ">
         <div className="sidebar_assets ">
@@ -15,6 +16,7 @@ export class Sidebar extends Component {
           <Search isOpened={isOpened} />
           {icons.map((icon, idx) => (
             <Link
+              children={icon.children}
               isOpened={isOpened}
               onActive={onActive}
               isActive={icon.isActive}
